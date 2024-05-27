@@ -9,17 +9,18 @@ class ChatApp(tk.Tk):
     def __init__(self):
         super().__init__()
 
-        self.title("Intelligent Assistant")
+        self.title("CatGPT 1.0 [Beta] - Local Server 1.0 [C] Flames Labs 20XX")
         self.geometry("600x400")
         self.resizable(False, False)
 
         style = ttk.Style(self)
         style.theme_use("clam")
         style.configure(".", background="#343541", foreground="white")
+        style.configure("TEntry", fieldbackground="#808080")  # Gray color for input box
         style.configure("TButton", background="#444654", foreground="white")
         style.map("TButton", background=[("active", "#565869")])
 
-        self.chat_history = tk.Text(self, wrap=tk.WORD, state=tk.DISABLED, bg="#444654", fg="white")
+        self.chat_history = tk.Text(self, wrap=tk.WORD, state=tk.DISABLED, bg="#D2B48C", fg="#008000")  # Green color for chat text
         self.chat_history.pack(padx=10, pady=10, fill=tk.BOTH, expand=True)
 
         input_frame = ttk.Frame(self)
